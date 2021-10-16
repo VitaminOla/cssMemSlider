@@ -1,0 +1,25 @@
+#slider {
+    position: relative;
+    text-align: center;
+    top: 1rem;
+    margin: 0 1rem 0 1rem;
+}
+
+#slider article {
+    width: 25%;
+    float: left;
+}
+
+#slides .image {
+    width: 400%;
+    line-height: 0;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+article img {
+    width: 100%;
+}
