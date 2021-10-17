@@ -3,6 +3,7 @@ body {
     padding: 0;
 background-color: #000000;
 }
+
 #slider {
     position: relative;
     text-align: center;
@@ -82,6 +83,20 @@ label, a {
     text-align: right;
 }
 
+@media (min-width: 530px) and (max-width: 680px){
+    #active {margin: 20% 0 0;
+        text-align: center;}
+}
+@media (min-width: 415px) and (max-width: 530px){
+    #active {margin: 15% 0 0;
+        text-align: center;}
+}
+
+@media (min-width: 375px) and (max-width: 415px){
+    #active {margin: 10% 0 0;
+        text-align: center;}
+}
+
 #active label:hover {
     background: #ffffff;
     border-color: #ffffff !important;
@@ -121,3 +136,15 @@ label, a {
 #switch4:checked ~ .gallery label:nth-of-type(4):after {
     content: attr(title); 
 }
+
+@media (min-width: 530px) and (max-width: 680px) {
+    .gallery {margin-top: 15%; font-size: 0.9rem;}
+  }
+
+  @media (min-width: 415px) and (max-width: 530px){
+    .gallery {margin-top: 20%; font-size: 0.8rem;}
+}    
+
+@media (min-width: 375px) and (max-width: 415px){
+    .gallery {margin-top: 30%; font-size: 0.7rem;}
+}    
