@@ -60,17 +60,17 @@ label, a {
 }
 
 #controls {
-    margin: -25% 0 0 0;
+    margin: -40% 0 0 0;
     width: 100%;
     height: 50px;
-    background: #000000;
+    
 }
 
 #active label {
     border-radius: 10px;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 8px;
+    height: 8px;
     background: #3c8dde;
     border: 2px solid #3c8dde;
     margin-left: 10px;
@@ -78,7 +78,7 @@ label, a {
 }
 
 #active {
-    margin: 23% 0 0;
+    margin: 29% 0 0;
     text-align: right;
 }
 
@@ -88,7 +88,6 @@ label, a {
     
 }
 #active label:hover {
-  /* outline: none; */
   box-shadow: 0 0 0 4px #ffffff;
   border: none;
 }
@@ -102,5 +101,23 @@ label, a {
 }
 
 #slides .image {
-    transition: all 800ms cubic-bezier(0.42, 0.000, 1.000, 1.000);
+    transition: all .5s ease;
+}
+
+.slider-bottom {
+    display: flex;
+}
+.gallery{
+    text-align: left; 
+    color: #ffffff;
+    padding: 0;
+    margin-top: 5%;
+    letter-spacing: 1px;
+}
+
+#switch1:checked ~ .gallery label:nth-of-type(1):after,
+#switch2:checked ~ .gallery label:nth-of-type(2):after, 
+#switch3:checked ~ .gallery label:nth-of-type(3):after, 
+#switch4:checked ~ .gallery label:nth-of-type(4):after {
+    content: attr(title); 
 }
