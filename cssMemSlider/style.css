@@ -1,0 +1,150 @@
+body {
+    margin: 0 2rem;
+    padding: 0;
+background-color: #000000;
+}
+
+#slider {
+    position: relative;
+    text-align: center;
+    top: 1rem;
+    margin: 0 auto;
+    background-color: #000000;
+}
+
+#slider article {
+    width: 25%;
+    float: left;
+}
+
+#slides .image {
+    width: 400%;
+    line-height: 0;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+article img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+#desktop:checked ~ #slider {
+    max-width: 600px;
+}
+
+label, a {
+    cursor: pointer;
+}
+
+.all input {
+    display: none;
+}
+
+#switch1:checked ~ #slides .image {
+    margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image {
+    margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image {
+    margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image {
+    margin-left: -300%;
+}
+
+#controls {
+    margin: -40% 0 0 0;
+    width: 100%;
+    height: 50px;
+    
+}
+
+#active label {
+    border-radius: 10px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #3c8dde;
+    border: 2px solid #3c8dde;
+    margin-left: 10px;
+    
+}
+
+#active {
+    margin: 29% 0 0;
+    text-align: right;
+}
+
+@media (min-width: 530px) and (max-width: 680px){
+    #active {margin: 20% 0 0;
+        text-align: center;}
+}
+@media (min-width: 415px) and (max-width: 530px){
+    #active {margin: 15% 0 0;
+        text-align: center;}
+}
+
+@media (min-width: 375px) and (max-width: 415px){
+    #active {margin: 10% 0 0;
+        text-align: center;}
+}
+
+#active label:hover {
+    background: #ffffff;
+    border-color: #ffffff !important;
+    
+}
+#active label:hover {
+  box-shadow: 0 0 0 4px #ffffff;
+  border: none;
+}
+
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4) {
+    background: #000000;
+    border-color: #3c8dde !important;
+}
+
+#slides .image {
+    transition: all .5s ease;
+}
+
+.slider-bottom {
+    display: flex;
+}
+.gallery{
+    text-align: left; 
+    color: #ffffff;
+    padding: 0;
+    margin-top: 5%;
+    letter-spacing: 1px;
+}
+
+#switch1:checked ~ .gallery label:nth-of-type(1):after,
+#switch2:checked ~ .gallery label:nth-of-type(2):after, 
+#switch3:checked ~ .gallery label:nth-of-type(3):after, 
+#switch4:checked ~ .gallery label:nth-of-type(4):after {
+    content: attr(title); 
+}
+
+@media (min-width: 530px) and (max-width: 680px) {
+    .gallery {margin-top: 15%; font-size: 0.9rem;}
+  }
+
+  @media (min-width: 415px) and (max-width: 530px){
+    .gallery {margin-top: 20%; font-size: 0.8rem;}
+}    
+
+@media (min-width: 375px) and (max-width: 415px){
+    .gallery {margin-top: 30%; font-size: 0.7rem;}
+}    
